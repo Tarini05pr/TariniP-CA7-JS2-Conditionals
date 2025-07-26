@@ -15,10 +15,33 @@
 <body>
    <p id="playerPick"></p>
    <p id = "compPick"></p>
+   <p id = "outcome"></p>
     <script>
         document.getElementById("playerPick").innerHTML = playerName + ', You picked ' + player + '!';
         document.getElementById("compPick").innerHTML ='The computer picked Bear!';
         console.log(playerName + ', You picked ' + player + '!');
         console.log('The computer picked Bear!');
+        let win;
+        switch (player){
+            case 'Bear':
+                win = 0;
+                break;
+            case 'Ninja':
+                win = -1;
+                break;
+            case 'Hunter':
+                win = 1; 
+                break;      
+        }   
+        if(win == 0){
+            document.getElementById("outcome").innerHTML = "Its A Tie.";
+            console.log('Its A Tie.');
+        } else if (win == 1){
+            document.getElementById("outcome").innerHTML = "You Win!!"
+            console.log('You Win!!');
+        } else {
+            document.getElementById("outcome").innerHTML = "You Lost."
+            console.log('You Lost.');
+        }
     </script>
 </body>
