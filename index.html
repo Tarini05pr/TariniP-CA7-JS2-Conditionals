@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play BHN</title>
+    <script>
+        let playerName = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started: ');
+        
+        window.alert("Hi " + playerName + " Let's Play!!");
+
+        let player = prompt('Who are you Bear, Ninja or Hunter?');
+    </script>
+</head>
+<body>
+   <p id="playerPick"></p>
+   <p id = "compPick"></p>
+    <script>
+        document.getElementById("playerPick").innerHTML = playerName + ', You picked ' + player + '!';
+        document.getElementById("compPick").innerHTML ='The computer picked Bear!';
+        console.log(playerName + ', You picked ' + player + '!');
+        console.log('The computer picked Bear!');
+    </script>
+</body>
