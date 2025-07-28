@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Play BHN</title>
     <script>
+        //this collects info from player//
         let playerName = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started: ');
         
         window.alert("Hi " + playerName + " Let's Play!!");
@@ -17,11 +18,14 @@
    <p id = "compPick"></p>
    <p id = "outcome"></p>
     <script>
+        //displays the players pick and the computers pick
         document.getElementById("playerPick").innerHTML = playerName + ', You picked ' + player + '!';
         document.getElementById("compPick").innerHTML ='The computer picked Bear!';
         console.log(playerName + ', You picked ' + player + '!');
         console.log('The computer picked Bear!');
+        //assigns a new variable for the winner
         let win;
+        //assigns a number value for a win, lose, or tie
         switch (player){
             case 'Bear':
                 win = 0;
@@ -33,6 +37,7 @@
                 win = 1; 
                 break;      
         }   
+        //determines the outcome based on the value of win
         if(win == 0){
             document.getElementById("outcome").innerHTML = "Its A Tie.";
             console.log('Its A Tie.');
